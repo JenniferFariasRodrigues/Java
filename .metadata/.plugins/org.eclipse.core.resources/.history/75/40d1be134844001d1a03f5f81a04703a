@@ -1,0 +1,41 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ProgramHigherPosition {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Quantos numeros voce vai digitar?: ");
+		int qtdNumbers = sc.nextInt();
+		int[] number = new int[qtdNumbers];
+		int[] count = new int[1];
+		int[] numberList = new int[qtdNumbers];
+		for (int i = 0; i < qtdNumbers; i++) {
+			System.out.println("Digite um numero: ");
+			number[i] = sc.nextInt();
+//			if (number[i] >number[i++]) {
+//				numberList[i] = number[i];
+////				count++;
+//
+//			}
+
+		}
+		System.out.println("MAIOR VALOR: ");
+//		for (int i = 0; i < qtdNumbers; i++) {
+//			if (number[i] >number[i++]) {
+//			System.out.println("numberList[i] "+numberList[i] );
+//			System.out.println("Posição: " + count[i]);
+//			}
+//			
+//		}
+//		System.out.println("Posição: " + count);
+
+		sc.close();
+	}
+
+}

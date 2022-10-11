@@ -1,0 +1,37 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ProgramMedia {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Quantos numeros voce vai digitar? : ");
+		int qtdNumbers = sc.nextInt();
+		double sum = 0.0, avg = 0.0;
+		double[] vect = new double[qtdNumbers];
+
+		for (int i = 0; i < qtdNumbers; i++) {
+			sc.nextLine();
+			System.out.println("Digite um numero: ");
+			vect[i] = sc.nextDouble();
+			sum += vect[i];
+		}
+		
+		System.out.print("Valores=");
+		for (int i = 0; i < qtdNumbers; i++) {
+//			System.out.print("Valor posição "+i +"="+vect[i] + ", "); 
+			System.out.print(vect[i]);
+		}
+		System.out.println("  ");
+		avg = sum / qtdNumbers;
+		System.out.println("Soma=" + sum);
+		System.out.println("Media=" + avg);
+
+	}
+
+}

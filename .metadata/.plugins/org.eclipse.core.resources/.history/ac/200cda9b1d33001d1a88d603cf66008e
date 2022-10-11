@@ -1,0 +1,86 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.DataAccountBank;
+import entities.Employee;
+
+public class ProgramAccountBank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		DataAccountBank dataAccountBank = new DataAccountBank();
+
+//		Employee employee = new Employee();
+		System.out.println("Data account: ");
+		System.out.println("Enter account number: ");
+		dataAccountBank.accountNumber = sc.nextDouble();
+		System.out.println("Enter account holder: ");
+		sc.nextLine();
+		dataAccountBank.name = sc.next();
+		System.out.println("Is there a initial deposit(y/n)?");
+		char response = sc.next().charAt(0);
+
+		if(response =='n') {
+			System.out.println("Account data if:");
+			System.out.println(" Account if: "+dataAccountBank.accountNumber +",Holder: "+dataAccountBank.name  +",Balance:$ "+0);
+			
+			
+		}else if(response=='y'){
+			System.out.println("Enter initial deposit value: ");
+			dataAccountBank.valueDeposit= sc.nextDouble();
+			
+			System.out.println("Account data else:");
+			System.out.println(" Account else: "+dataAccountBank.accountNumber +",Holder: "+dataAccountBank.name  +",Balance:$ "+dataAccountBank.valueDeposit);
+	
+			
+		}
+			
+	
+		System.out.println("Enter a deposit value: ");
+		double valueIncrease = sc.nextDouble();
+		
+		System.out.println();
+		System.out.println(" Update Account data increase: ");
+//		double valueDepositIncrease=dataAccountBank.valueDeposit+valueIncrease;
+
+		System.out.println(" Account: "+dataAccountBank.accountNumber +",Holder: "+dataAccountBank.name  +",Balance:$ "+dataAccountBank.increaseDepositValue(valueIncrease));
+
+		System.out.println();
+		System.out.println(" Enter a withdraw value: ");
+		double valueDecrement = sc.nextDouble();
+
+		System.out.println(" Update Account data decrease");
+		double dataDecrease=dataAccountBank.increaseDepositValue(valueIncrease)-valueDecrement-5;
+
+		System.out.println(" Account: "+dataAccountBank.accountNumber +",Holder: "+dataAccountBank.name  +",Balance:$ "+dataDecrease);
+
+//		System.out.println("Gross salary: ");
+//		employee.grossSalary=sc.nextDouble();
+//		System.out.println("Tax:");
+//		employee.tax=sc.nextDouble();
+//		
+//		System.out.println();
+//		System.out.println("Employee: "+employee);
+//		
+//		System.out.println();
+//		System.out.println("Which percentage to increase salary? ");
+//		double percentage = sc.nextDouble();
+//		employee.increaseSalary(percentage);
+//		
+//		System.out.println();
+//		System.out.println("Update data: "+employee);
+//		
+		
+		
+		
+		
+		
+
+	}
+
+}
